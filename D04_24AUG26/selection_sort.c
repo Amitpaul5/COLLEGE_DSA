@@ -6,6 +6,12 @@ void intermediateArray(int arr[],int size){
     }
     printf("\n");
 }
+void swap(int arr[], int i, int j){
+    int temp;
+    temp = arr[i]; 
+    arr[i] = arr[j];
+    arr[j] = temp; 
+}
 void selectionSort(int arr[],int size){
     for (int step=0;step<size-1;step++){
         int min_idx=step;
@@ -14,9 +20,7 @@ void selectionSort(int arr[],int size){
                 min_idx=i;
             }
         }
-        int temp=arr[min_idx];
-        arr[min_idx]=arr[step];
-        arr[step]=temp;
+        swap(arr, min_idx, step);
         intermediateArray(arr,size);
     }
 }
