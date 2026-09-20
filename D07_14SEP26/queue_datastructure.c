@@ -1,23 +1,7 @@
 // Q2. QUEUE DATA STRUCTURE 14SEP2026 
 #include<stdio.h>
 #define MAX 20
-void enQueue(int);
-void deQueue();
-void display();
 int item [MAX],front =-1,rear=-1;
-int main(){
-    display();
-    deQueue();
-    enQueue(10);
-    enQueue(20);
-    enQueue(30);
-    // enQueue(40);
-    // enQueue(50);
-    // enQueue(60);
-    display();
-    deQueue();
-    display();
-}
 void enQueue(int value){
     if(rear == MAX-1)
     printf("Queue is full\n");
@@ -51,4 +35,17 @@ void display(){
         printf("%d ", item[i]);
         printf("\n");
     }
+}
+int main(){
+    display();
+    deQueue();
+    enQueue(10);
+    enQueue(20);
+    enQueue(30);
+    enQueue(40);
+    enQueue(50);
+    enQueue(60);
+    display();
+    deQueue();
+    display();
 }
