@@ -1,7 +1,7 @@
 // Q2. QUEUE DATA STRUCTURE 14SEP2026 
 #include<stdio.h>
 #define MAX 20
-int item [MAX],front =-1,rear=-1;
+int queue [MAX],front =-1,rear=-1;
 void enQueue(int value){
     if(rear == MAX-1)
     printf("Queue is full\n");
@@ -9,7 +9,7 @@ void enQueue(int value){
         if(front == -1)
         front = 0;
         rear++;
-        item[rear] = value;
+        queue[rear] = value;
         printf("Inserted = %d\n", value);
     }
 }
@@ -19,7 +19,7 @@ void deQueue(){
         return;
     }
     else{
-        printf("Deleted : %d\n", item[front]);
+        printf("Deleted : %d\n", queue[front]);
         front++;
         if (front > rear){
             front = rear = -1;
@@ -32,7 +32,7 @@ void display(){
     else{
         printf("Queue elements are:\n");
         for(int i = front; i <= rear; i++)
-        printf("%d ", item[i]);
+        printf("%d ", queue[i]);
         printf("\n");
     }
 }
