@@ -1,4 +1,4 @@
-//Q2.  7SEP2026
+//Q2.  COMBINE INSERTION SORT & BINARY SEARCH 7SEP2026
 #include<stdio.h>
 int binarysearch(int array[],int x,int low,int high){
 	if(high >= low){

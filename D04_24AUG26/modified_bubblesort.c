@@ -1,5 +1,11 @@
 //Q5. MODIFIED BUBBLE SORT ALGORITHM 24AUG2026
 #include<stdio.h>
+void printArray(int arr[],int size){
+    for(int k=0;k<size;k++){
+        printf(" %d", arr[k]);
+    }
+    printf("\n");
+} 
 void bubbleSort(int arr[],int size){
     int swap=0;
     for(int step=0;step<size-1;++step){
@@ -11,22 +17,16 @@ void bubbleSort(int arr[],int size){
                 swap=1;
             }
         }
-        if (swap==0){
-            break;
-        }
-        for(int k=0;k<size;k++){
-            printf(" %d", arr[k]);
-        }
-        printf("\n");
+        if (swap==0)
+        break;
+        printArray(arr,size);
     }
 }
 int main(){
-    int data[]={15,20,10,30,5,25,11,14};
-    int size= sizeof(data)/sizeof(data[0]);
-    bubbleSort(data,size);
+    int arr[]={6,4,7,8,1,9,5};
+    int size= sizeof(arr)/sizeof(arr[0]);
+    bubbleSort(arr,size);
     printf("Bubble Sorted array is \n");
-    for(int i=0;i<size;++i){
-        printf("  %d",data[i]);
-    }
+    printArray(arr,size);
 }
 

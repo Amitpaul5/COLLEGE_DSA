@@ -1,4 +1,4 @@
-//Q3.  7SEP2026
+//Q3.  COMBINE BUBBLE SORT AND QUICK SORT 7SEP2026
 #include<stdio.h>
 void swap(int arr[], int i, int j){
     int temp;
@@ -54,5 +54,4 @@ int main(){
     for(int i=0;i<size;i++){
         printf("  %d",data[i]);
     }
-    
 }

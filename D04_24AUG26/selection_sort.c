@@ -1,36 +1,31 @@
 // Q2. SELECTION SORT ALGORITHM 24AUG2026
 #include<stdio.h>
-void intermediateArray(int arr[],int size){
+void printArray(int arr[],int size){
     for(int k=0;k<size;k++){
         printf(" %d", arr[k]);
     }
     printf("\n");
-}
+} 
 void swap(int arr[], int i, int j){
-    int temp;
-    temp = arr[i]; 
+    int temp = arr[i]; 
     arr[i] = arr[j];
     arr[j] = temp; 
 }
 void selectionSort(int arr[],int size){
-    for (int step=0;step<size-1;step++){
-        int min_idx=step;
+    for (int step=0;step<size-1;step++){ //COMPARE WITH (ASSUMED SMALLEST ELEMENT)WITH ENTAIRE ARRAY & PUT SMALLEST AT FIRST
+        int min_idx=step; //SHORTEST ELEMENT IS AT STEP(ZERO INDEX)
         for(int i=step+1;i<size;i++){
-            if (arr[i]<arr[min_idx]){
-                min_idx=i;
-            }
+            if (arr[i]<arr[min_idx])
+            min_idx=i;
         }
         swap(arr, min_idx, step);
-        intermediateArray(arr,size);
+        printArray(arr,size);
     }
 }
-
 int main(){
-    int data[]={15,20,10,30,5,25};
-    int size= sizeof(data)/sizeof(data[0]);
-    selectionSort(data,size);
+    int arr[]={15,20,10,30,5,25};
+    int size= sizeof(arr)/sizeof(arr[0]);
+    selectionSort(arr,size);
     printf("Selection Sorted array is \n");
-    for(int i=0;i<size;++i){
-        printf("  %d",data[i]);
-    }
+    printArray(arr,size);
 }

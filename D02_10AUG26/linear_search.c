@@ -1,10 +1,10 @@
 //Q2. LINEAR SEARCH OF ARRAY ELEMENT 
 #include <stdio.h>
-int linearSearch(int arr[],int key,int n){
+int linearSearch(int arr[],int search,int size){
     int p=-1;
-    for(int i=0;i<n;i++){
-        if(arr[i]==key){
-            p=i;
+    for(int i=0;i<size;i++){
+        if(arr[i]==search){
+        p=i;
         break;
         }
     }
@@ -12,8 +12,9 @@ int linearSearch(int arr[],int key,int n){
 }
 int main(){
     int arr[]={10,20,30,40,50,60,70,80};
-    int key=40;
-    int result=linearSearch(arr,40,8);
+    int search=40;
+    int size=sizeof(arr)/sizeof(arr[0]);
+    int result=linearSearch(arr,search,size);
     if(result==-1)
     printf("not found\n");
     printf("position is = %d",result);
